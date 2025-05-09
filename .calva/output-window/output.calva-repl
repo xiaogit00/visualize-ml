@@ -53,71 +53,79 @@ clj꞉shadow.user꞉> 
 nil
 "Please see https://calva.io/output/#about-stdout-in-the-repl-window
 about why stdout printed to this file is prepended with `;` to be line comments."
-cljs꞉user꞉> 
+clj꞉user꞉> 
 ; Jack-in done.
-cljs꞉user꞉> (+ 1 1)
-1
-cljs꞉user꞉> (count 'helllo')
-helllo'
-cljs꞉user꞉> (count "hello")
-nil
+clj꞉user꞉> 
+; [:app] Compiling ...
+; [:app] Build completed. (477 files, 2 compiled, 0 warnings, 0.23s)
+; [:app] Compiling ...
+; [:app] Build completed. (477 files, 2 compiled, 0 warnings, 0.24s)
+; [:app] Compiling ...
+; [:app] Build completed. (477 files, 2 compiled, 0 warnings, 0.22s)
+; [:app] Compiling ...
+; [:app] Build completed. (477 files, 2 compiled, 0 warnings, 0.34s)
+; [:app] Compiling ...
+; [:app] Build failure:
+; ------ ERROR -------------------------------------------------------------------
+;  File: /Users/lei/p/visualize-ml/src/visualize_ml/views.cljs:19:46
+; --------------------------------------------------------------------------------
+;   16 |       [:option "With options"]]]]])
+;   17 | 
+;   18 | (defn main-panel []
+;   19 |   (let [name (re-frame/subscript [::subs/name])]
+; ----------------------------------------------------^---------------------------
+; visualize_ml/views.cljs [line 19, col 46] Invalid keyword: ::subs/name.
 ; 
-; ------ WARNING - :undeclared-var -----------------------------------------------
-;  Resource: <eval>:1:1
-;  Use of undeclared Var user/hello
+; --------------------------------------------------------------------------------
+;   20 |     [:div
+;   21 |      [text-input]
+;   22 |      [select-input]]))
+;   23 | 
 ; --------------------------------------------------------------------------------
 ; 
-cljs꞉user꞉> 
-; Evaluating file: views.cljs
+; [:app] Compiling ...
+; [:app] Build failure:
+; ------ ERROR -------------------------------------------------------------------
+;  File: /Users/lei/p/visualize-ml/src/visualize_ml/views.cljs:19:46
+; --------------------------------------------------------------------------------
+;   16 |       [:option "With options"]]]]])
+;   17 | 
+;   18 | (defn main-panel []
+;   19 |   (let [name (re-frame/subscripe [::subs/name])]
+; ----------------------------------------------------^---------------------------
+; visualize_ml/views.cljs [line 19, col 46] Invalid keyword: ::subs/name.
 ; 
-; ; cljs  visualize-ml.views 
-; No available JS runtime.
-; See https://shadow-cljs.github.io/docs/UsersGuide.html#repl-troubleshooting
-nil
-cljs꞉visualize-ml.views꞉> 
+; --------------------------------------------------------------------------------
+;   20 |     [:div
+;   21 |      [text-input]
+;   22 |      [select-input]]))
+;   23 | 
+; --------------------------------------------------------------------------------
+; 
 ; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.22s)
+; [:app] Build failure:
+; ------ ERROR -------------------------------------------------------------------
+;  File: /Users/lei/p/visualize-ml/src/visualize_ml/views.cljs:19:46
+; --------------------------------------------------------------------------------
+;   16 |       [:option "With options"]]]]])
+;   17 | 
+;   18 | (defn main-panel []
+;   19 |   (let [name (re-frame/subscribe [::subs/name])]
+; ----------------------------------------------------^---------------------------
+; visualize_ml/views.cljs [line 19, col 46] Invalid keyword: ::subs/name.
+; 
+; --------------------------------------------------------------------------------
+;   20 |     [:div
+;   21 |      [text-input]
+;   22 |      [select-input]]))
+;   23 | 
+; --------------------------------------------------------------------------------
+; 
 ; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.19s)
+; [:app] Build failure:
+; The required namespace "animal-form.subs" is not available, it was required by "visualize_ml/views.cljs".
+; 
 ; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.14s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.14s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.18s)
-1
-cljs꞉visualize-ml.views꞉> 
-nil
-cljs꞉visualize-ml.views꞉> 
-nil
-cljs꞉visualize-ml.views꞉> 
-nil
-cljs꞉visualize-ml.views꞉> 
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.22s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.20s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.15s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.15s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.13s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.37s)
+; [:app] Build completed. (478 files, 1 compiled, 0 warnings, 0.15s)
 ; [:app] Compiling ...
 ; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.18s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.29s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.24s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.48s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.43s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.24s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.23s)
-; [:app] Compiling ...
-; [:app] Build completed. (477 files, 2 compiled, 0 warnings, 0.47s)
