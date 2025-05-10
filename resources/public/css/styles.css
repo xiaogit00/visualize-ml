@@ -1,3 +1,14 @@
 .debug {
     border: 1px solid red !important;
 }
+
+.is-fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index:10;
+    background: #FFFBF2;
+    padding: 1rem;
+    height: 12em;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
