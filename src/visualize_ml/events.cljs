@@ -9,3 +9,8 @@
  ::initialize-db
  (fn-traced [_ _]
    db/default-db))
+
+;; (re-frame/reg-event-db
+;;  ::update-form
+;;  (fn [db [_ id val]]
+;;    (assoc-in db [:form id] val)))
