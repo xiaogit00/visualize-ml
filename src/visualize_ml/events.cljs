@@ -10,7 +10,7 @@
  (fn-traced [_ _]
    db/default-db))
 
-;; (re-frame/reg-event-db
-;;  ::update-form
-;;  (fn [db [_ id val]]
-;;    (assoc-in db [:form id] val)))
+(re-frame/reg-event-db
+ ::update-name
+ (fn [db [_ val]]
+   (assoc db :name val)))
