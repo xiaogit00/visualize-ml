@@ -22,16 +22,18 @@
 (defn z-matrix [] 
   [:div.column.is-one-fifths
    [:h2 "z"]])
+(defn x-input [] 
+  [:div.column.is-two-thirds.is-flex.is-align-items-center
+   [:p.pr-2 "x:"]
+   [:input.input {:on-change ()
+                  :type "text" :placeholder "1, 2, 3, 4..."}]])
 
 (defn bottom-control-panel [] 
   [:div.is-fixed-bottom.columns
    [:div.is-flex.is-flex-direction-column.column.is-two-fifths.is-justify-content-space-around.pt-0
     [:div "Input Data"]
     [:div.columns.mb-0
-     [:div.column.is-two-thirds.is-flex.is-align-items-center
-      [:p.pr-2 "x:"]
-      [:input.input {:type "text" :placeholder "1, 2, 3, 4..."}]
-      ]
+     [x-input]
      [:div.column.is-one-third 
       [:button.button "Initialize Params"]]]
     
