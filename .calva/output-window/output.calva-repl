@@ -59,19 +59,94 @@ clj꞉user꞉> 
 ; [:app] Compiling ...
 ; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.25s)
 ; [:app] Compiling ...
+; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.19s)
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 3 compiled, 0 warnings, 0.20s)
+; [:app] Compiling ...
 ; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.22s)
 ; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.14s)
+; [:app] Build completed. (478 files, 2 compiled, 1 warnings, 0.20s)
+; 
+; ------ WARNING #1 - :undeclared-var --------------------------------------------
+;  File: /Users/lei/p/visualize-ml/src/visualize_ml/views.cljs:20:17
+; --------------------------------------------------------------------------------
+;   17 | (defn y-matrix [] 
+;   18 |   [:div.column.is-one-fifths
+;   19 |    [:h2 "y"]
+;   20 |    [:p (pr-str @y)]])
+; -----------------------^--------------------------------------------------------
+;  Use of undeclared Var visualize-ml.views/y
+; --------------------------------------------------------------------------------
+;   21 | 
+;   22 | (defn params [] 
+;   23 |   [:div.column.is-one-fifths
+;   24 |    [:h2 "params"]])
+; --------------------------------------------------------------------------------
 ; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.14s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 3 compiled, 0 warnings, 0.21s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.11s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 3 compiled, 0 warnings, 0.24s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 3 compiled, 0 warnings, 0.12s)
+; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.18s)
 ; [:app] Compiling ...
 ; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.20s)
-; nREPL Connection was closed
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.23s)
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.14s)
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.18s)
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.10s)
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.16s)
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.18s)
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.15s)
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.17s)
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.34s)
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.20s)
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.20s)
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 3 compiled, 0 warnings, 0.16s)
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 3 compiled, 0 warnings, 0.25s)
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 3 compiled, 0 warnings, 0.22s)
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 3 compiled, 2 warnings, 0.19s)
+; 
+; ------ WARNING #1 - :undeclared-ns ---------------------------------------------
+;  File: /Users/lei/p/visualize-ml/src/visualize_ml/events.cljs:15:11
+; --------------------------------------------------------------------------------
+;   12 |    db/default-db))
+;   13 | 
+;   14 | (defn str->vec [s]
+;   15 |   (mapv #(Double/parseDouble %) (str/split s #",")))
+; -----------------^--------------------------------------------------------------
+;  No such namespace: Double, could not locate Double.cljs, Double.cljc, or JavaScript source providing "Double"
+; --------------------------------------------------------------------------------
+;   16 | 
+;   17 | 
+;   18 | (re-frame/reg-event-db
+;   19 |  ::update-x
+; --------------------------------------------------------------------------------
+; 
+; ------ WARNING #2 - :undeclared-var --------------------------------------------
+;  File: /Users/lei/p/visualize-ml/src/visualize_ml/events.cljs:15:11
+; --------------------------------------------------------------------------------
+;   12 |    db/default-db))
+;   13 | 
+;   14 | (defn str->vec [s]
+;   15 |   (mapv #(Double/parseDouble %) (str/split s #",")))
+; -----------------^--------------------------------------------------------------
+;  Use of undeclared Var Double/parseDouble
+; --------------------------------------------------------------------------------
+;   16 | 
+;   17 | 
+;   18 | (re-frame/reg-event-db
+;   19 |  ::update-x
+; --------------------------------------------------------------------------------
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 3 compiled, 0 warnings, 0.19s)

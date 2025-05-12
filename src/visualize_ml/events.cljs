@@ -3,6 +3,7 @@
    [re-frame.core :as re-frame]
    [visualize-ml.db :as db]
    [day8.re-frame.tracing :refer-macros [fn-traced]]
+   [clojure.string :as str]
    ))
 
 (re-frame/reg-event-db
@@ -10,7 +11,16 @@
  (fn-traced [_ _]
    db/default-db))
 
-;; (re-frame/reg-event-db
-;;  ::update-form
-;;  (fn [db [_ id val]]
-;;    (assoc-in db [:form id] val)))
+(defn str->vec [s]
+  (mapv js/parseFloat (str/split s #",")))
+
+
+(re-frame/reg-event-db
+ ::update-x
+ (fn [db [_ val]]
+   (assoc db :x (str->vec val))))
+  
+(re-frame/reg-event-db
+ ::update-y
+ (fn [db [_ val]]
+   (assoc db :y val)))
