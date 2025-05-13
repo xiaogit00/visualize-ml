@@ -83,12 +83,23 @@
               config {:type "line"
                       :data data}]
           (reset! chart-instance (Chart. ctx (clj->js config)))))
-
+      
+      :component-did-update
+      (fn [this]
+        ;; Update both x (labels) and y (data)
+        (when-let [chart @chart-instance]
+            (aset chart "data" "labels" (clj->js @x))
+            (aset chart "data" "datasets" 0 "data" (clj->js @y))
+            (.update chart)))
+      
       :reagent-render
       (fn []
-        [:canvas {:ref #(reset! chart-ref %)
-                  :width 400
-                  :height 200}])})))
+        ;; Re-render triggers due to deref here
+        (let [x @x
+              y @y]
+          [:canvas {:ref #(reset! chart-ref %)
+                    :width 400
+                    :height 200}]))})))
 
 (defn chart []
   [:div.column.is-two-fifths
