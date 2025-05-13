@@ -12,15 +12,15 @@
    db/default-db))
 
 (defn str->vec [s]
-  (mapv js/parseFloat (str/split s #",")))
+  (mapv #(js/parseFloat (str/trim %)) (str/split s #",")))
 
 
 (re-frame/reg-event-db
  ::update-x
  (fn [db [_ val]]
-   (assoc db :x (str->vec val))))
+   (if (= val "") (assoc db :x []) (assoc db :x (str->vec val)))))
   
 (re-frame/reg-event-db
  ::update-y
  (fn [db [_ val]]
-   (assoc db :y val)))
+   (if (= val "") (assoc db :y []) (assoc db :y (str->vec val)))))

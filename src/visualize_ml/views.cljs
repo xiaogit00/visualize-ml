@@ -1,12 +1,41 @@
 (ns visualize-ml.views
   (:require
    [re-frame.core :as re-frame]
+   [reagent.core :as r]
    [visualize-ml.subs :as subs]
-   [visualize-ml.events :as events]))
+   [visualize-ml.events :as events]
+   ["chart.js/auto" :as Chart]))
+
+(defonce chart-instance (atom nil))
+
+(defn line-chart []
+  (let [chart-ref (r/atom nil)]
+    (r/create-class
+     {:display-name "line-chart"
+
+      :component-did-mount
+      (fn [this]
+        (let [ctx (.getContext @chart-ref "2d")
+              data {:labels ["Jan" "Feb" "Mar" "Apr"]
+                    :datasets [{:label "My Dataset"
+                                :data [10 20 15 30]
+                                :borderColor "rgba(75, 192, 192, 1)"
+                                :tension 0.4
+                                :fill false}]}
+              config {:type "line"
+                      :data data}]
+          (reset! chart-instance (Chart. ctx (clj->js config)))))
+
+      :reagent-render
+      (fn []
+        [:canvas {:ref #(reset! chart-ref %)
+                  :width 400
+                  :height 200}])})))
 
 (defn chart [] 
   [:div.column.is-two-fifths
-       [:h2 "charts"]])
+       [:h2 "charts"]
+   [line-chart]])
 
 (defn x-matrix []
   (let [x (re-frame/subscribe [::subs/x])]

@@ -57,96 +57,94 @@ clj꞉user꞉> 
 ; Jack-in done.
 clj꞉user꞉> 
 ; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.25s)
+; [:app] Build completed. (478 files, 3 compiled, 0 warnings, 0.18s)
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 3 compiled, 0 warnings, 0.54s)
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 3 compiled, 0 warnings, 0.24s)
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 3 compiled, 0 warnings, 0.19s)
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.16s)
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 3 compiled, 0 warnings, 0.16s)
+; [:app] Compiling ...
+; [:app] Build completed. (478 files, 3 compiled, 0 warnings, 0.17s)
 ; [:app] Compiling ...
 ; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.19s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 3 compiled, 0 warnings, 0.20s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.22s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 1 warnings, 0.20s)
-; 
-; ------ WARNING #1 - :undeclared-var --------------------------------------------
-;  File: /Users/lei/p/visualize-ml/src/visualize_ml/views.cljs:20:17
-; --------------------------------------------------------------------------------
-;   17 | (defn y-matrix [] 
-;   18 |   [:div.column.is-one-fifths
-;   19 |    [:h2 "y"]
-;   20 |    [:p (pr-str @y)]])
-; -----------------------^--------------------------------------------------------
-;  Use of undeclared Var visualize-ml.views/y
-; --------------------------------------------------------------------------------
-;   21 | 
-;   22 | (defn params [] 
-;   23 |   [:div.column.is-one-fifths
-;   24 |    [:h2 "params"]])
-; --------------------------------------------------------------------------------
 ; [:app] Compiling ...
 ; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.18s)
 ; [:app] Compiling ...
 ; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.20s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.23s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.14s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.18s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.10s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.16s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.18s)
 ; [:app] Compiling ...
 ; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.15s)
 ; [:app] Compiling ...
 ; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.17s)
 ; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.34s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.20s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 2 compiled, 0 warnings, 0.20s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 3 compiled, 0 warnings, 0.16s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 3 compiled, 0 warnings, 0.25s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 3 compiled, 0 warnings, 0.22s)
-; [:app] Compiling ...
-; [:app] Build completed. (478 files, 3 compiled, 2 warnings, 0.19s)
+; [:app] Build completed. (482 files, 6 compiled, 4 warnings, 3.27s)
 ; 
 ; ------ WARNING #1 - :undeclared-ns ---------------------------------------------
-;  File: /Users/lei/p/visualize-ml/src/visualize_ml/events.cljs:15:11
+;  File: /Users/lei/p/visualize-ml/src/visualize_ml/views.cljs:11:20
 ; --------------------------------------------------------------------------------
-;   12 |    db/default-db))
-;   13 | 
-;   14 | (defn str->vec [s]
-;   15 |   (mapv #(Double/parseDouble %) (str/split s #",")))
-; -----------------^--------------------------------------------------------------
-;  No such namespace: Double, could not locate Double.cljs, Double.cljc, or JavaScript source providing "Double"
+;    8 | (defonce chart-instance (atom nil))
+;    9 | 
+;   10 | (defn line-chart []
+;   11 |   (let [chart-ref (r/atom nil)]
+; --------------------------^-----------------------------------------------------
+;  No such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"
 ; --------------------------------------------------------------------------------
-;   16 | 
-;   17 | 
-;   18 | (re-frame/reg-event-db
-;   19 |  ::update-x
+;   12 |     (r/create-class
+;   13 |      {:display-name "line-chart"
+;   14 | 
+;   15 |       :component-did-mount
 ; --------------------------------------------------------------------------------
 ; 
 ; ------ WARNING #2 - :undeclared-var --------------------------------------------
-;  File: /Users/lei/p/visualize-ml/src/visualize_ml/events.cljs:15:11
+;  File: /Users/lei/p/visualize-ml/src/visualize_ml/views.cljs:11:20
 ; --------------------------------------------------------------------------------
-;   12 |    db/default-db))
-;   13 | 
-;   14 | (defn str->vec [s]
-;   15 |   (mapv #(Double/parseDouble %) (str/split s #",")))
-; -----------------^--------------------------------------------------------------
-;  Use of undeclared Var Double/parseDouble
+;    8 | (defonce chart-instance (atom nil))
+;    9 | 
+;   10 | (defn line-chart []
+;   11 |   (let [chart-ref (r/atom nil)]
+; --------------------------^-----------------------------------------------------
+;  Use of undeclared Var r/atom
 ; --------------------------------------------------------------------------------
-;   16 | 
-;   17 | 
-;   18 | (re-frame/reg-event-db
-;   19 |  ::update-x
+;   12 |     (r/create-class
+;   13 |      {:display-name "line-chart"
+;   14 | 
+;   15 |       :component-did-mount
+; --------------------------------------------------------------------------------
+; 
+; ------ WARNING #3 - :undeclared-ns ---------------------------------------------
+;  File: /Users/lei/p/visualize-ml/src/visualize_ml/views.cljs:12:6
+; --------------------------------------------------------------------------------
+;    9 | 
+;   10 | (defn line-chart []
+;   11 |   (let [chart-ref (r/atom nil)]
+;   12 |     (r/create-class
+; ------------^-------------------------------------------------------------------
+;  No such namespace: r, could not locate r.cljs, r.cljc, or JavaScript source providing "r"
+; --------------------------------------------------------------------------------
+;   13 |      {:display-name "line-chart"
+;   14 | 
+;   15 |       :component-did-mount
+;   16 |       (fn [this]
+; --------------------------------------------------------------------------------
+; 
+; ------ WARNING #4 - :undeclared-var --------------------------------------------
+;  File: /Users/lei/p/visualize-ml/src/visualize_ml/views.cljs:12:6
+; --------------------------------------------------------------------------------
+;    9 | 
+;   10 | (defn line-chart []
+;   11 |   (let [chart-ref (r/atom nil)]
+;   12 |     (r/create-class
+; ------------^-------------------------------------------------------------------
+;  Use of undeclared Var r/create-class
+; --------------------------------------------------------------------------------
+;   13 |      {:display-name "line-chart"
+;   14 | 
+;   15 |       :component-did-mount
+;   16 |       (fn [this]
 ; --------------------------------------------------------------------------------
 ; [:app] Compiling ...
-; [:app] Build completed. (478 files, 3 compiled, 0 warnings, 0.19s)
+; [:app] Build completed. (482 files, 2 compiled, 0 warnings, 0.22s)
