@@ -75,9 +75,9 @@
       (fn [this]
         (let [ctx (.getContext @chart-ref "2d")
               data {:labels @y
-                    :datasets [{:label "My Dataset"
+                    :datasets [{:label "y"
                                 :data @x
-                                :borderColor "rgba(75, 192, 192, 1)"
+                                :borderColor "rgb(255, 192, 82)"
                                 :tension 0.4
                                 :fill false}]}
               config {:type "line"
