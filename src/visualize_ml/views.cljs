@@ -109,7 +109,7 @@
 (defn main-panel [] 
   [:div.is-family-monospace 
    [:div.container
-    [:h1.has-text-centered "Logistic Regression"]
+    [:h1.has-text-centered.is-size-2 "Logistic Regression"]
     ]
    [:div.container.columns
     [chart]

@@ -182,3 +182,4 @@ clj꞉user꞉> 
 ; [:app] Build completed. (482 files, 2 compiled, 0 warnings, 0.18s)
 ; [:app] Compiling ...
 ; [:app] Build completed. (482 files, 2 compiled, 0 warnings, 0.22s)
+; nREPL Connection was closed
